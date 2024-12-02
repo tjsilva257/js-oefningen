@@ -12,6 +12,6 @@ document.querySelector(".add-movie").addEventListener("click", function() {
         li.textContent = film;
         movieList.appendChild(li);
     });
-    document.querySelector(".movie-input").value = ""; //De .value eigenschap in JavaScript wordt gebruikt om de waarde van een invoerelement (zoals een tekstvak) te verkrijgen of in te stellen.
+    document.querySelector(".movie-input").value = ""; //De .value eigenschap wordt gebruikt om de waarde van een invoerelement (zoals een tekstvak) te verkrijgen of in te stellen.
    } // Dus deze code zorgt ervoor dat het invoerveld met de klasse movie-input wordt geleegd
 });
