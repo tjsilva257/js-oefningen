@@ -1,0 +1,107 @@
+body {
+    display: grid;
+    grid-template-areas: 
+        "logo"
+        "nav"
+        "content"
+        "footer";
+    gap: 5px;
+    background-color: white;
+    color: white;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    grid-area: logo;
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav {
+    grid-area: nav;
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    text-align: center;
+    background-color: transparent; /* Remove background color */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    body {
+        grid-template-areas: 
+            "logo logo"
+            "nav nav"
+            "ford mercedes"
+            "bmw bmw"
+            "footer footer";
+    }
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "ford mercedes"
+            "bmw bmw";
+    }
+    main > div:nth-child(1) {
+        grid-area: ford;
+    }
+    main > div:nth-child(2) {
+        grid-area: bmw;
+    }
+    main > div:nth-child(3) {
+        grid-area: mercedes;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        grid-template-areas: 
+            "logo logo"
+            "nav nav"
+            "ford mercedes"
+            "bmw bmw"
+            "footer footer";
+    }
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "ford mercedes"
+            "bmw bmw";
+    }
+    main > div:nth-child(1) {
+        grid-area: ford;
+    }
+    main > div:nth-child(2) {
+        grid-area: bmw;
+    }
+    main > div:nth-child(3) {
+        grid-area: mercedes;
+    }
+}
